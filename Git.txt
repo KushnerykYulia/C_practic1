@@ -1,0 +1,130 @@
+
+Yuliia@DESKTOP-MTLS668 MINGW64 ~
+$ cd /e
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e
+$ mkdir GitProject
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e
+$ cd GitProject
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject
+$ git clone https://github.com/denys-ko/softwareDevelopmentTechLog.git
+Cloning into 'softwareDevelopmentTechLog'...
+remote: Enumerating objects: 607, done.
+remote: Counting objects: 100% (209/209), done.
+remote: Compressing objects: 100% (72/72), done.
+remote: Total 607 (delta 172), reused 153 (delta 137), pack-reused 398 (from 2)
+Receiving objects: 100% (607/607), 89.35 KiB | 1.33 MiB/s, done.
+Resolving deltas: 100% (317/317), done.
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject
+$ cd softwareDevelopmentTechLog
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ touch IO-42.txt
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git add IO-42.txt
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   IO-42.txt
+
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git config --global --list
+filesystem.Eclipse Adoptium|21.0.3|-1978420085.timestampresolution=1017 microseconds
+filesystem.Eclipse Adoptium|21.0.3|-1978420085.minracythreshold=0 nanoseconds
+filesystem.Eclipse Adoptium|21.0.3|-2106374451.timestampresolution=16129 microseconds
+filesystem.Eclipse Adoptium|21.0.3|-2106374451.minracythreshold=0 nanoseconds
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git config --global user.name "KushnerykYulia"
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git config --global user.email "kushneryk2377@gmail.com"
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git config --global --list
+filesystem.Eclipse Adoptium|21.0.3|-1978420085.timestampresolution=1017 microseconds
+filesystem.Eclipse Adoptium|21.0.3|-1978420085.minracythreshold=0 nanoseconds
+filesystem.Eclipse Adoptium|21.0.3|-2106374451.timestampresolution=16129 microseconds
+filesystem.Eclipse Adoptium|21.0.3|-2106374451.minracythreshold=0 nanoseconds
+user.name=KushnerykYulia
+user.email=kushneryk2377@gmail.com
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git config --global core.editor "notepad"
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git commit -s
+hint: Waiting for your editor to close the file... unix2dos: converting file E:/GitProject/softwareDevelopmentTechLog/.git/COMMIT_EDITMSG to DOS format...
+dos2unix: converting file E:/GitProject/softwareDevelopmentTechLog/.git/COMMIT_EDITMSG to Unix format...
+[main 4344641] Add a file with my group name (IO-42) and information about me.
+ 1 file changed, 6 insertions(+)
+ create mode 100644 IO-42.txt
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git log
+commit 434464119b4dd7a3f4ec7a03fd77a02d1911d2a9 (HEAD -> main)
+Author: KushnerykYulia <kushneryk2377@gmail.com>
+Date:   Thu Nov 5 17:48:46 2026 +0200
+
+    Add a file with my group name (IO-42) and information about me.
+
+    Signed-off-by: KushnerykYulia <kushneryk2377@gmail.com>
+
+commit 13b91e59af02a4c12a980c033f4f81c7ebc8bc65 (origin/main, origin/HEAD)
+Author: Mykhailo Renkas <renkas.mykhailo_ipz41@edu.kpi.ua>
+Date:   Sun Oct 11 12:23:02 2026 +0200
+
+    Add ipz41.txt with student Renkas M. (IP-z41, #13)
+
+    Signed-off-by: Mykhailo Renkas <renkas.mykhailo_ipz41@edu.kpi.ua>
+
+commit 9615a589a26b4724404e166733ed99feee081be3
+Merge: 9647efe bd95cf4
+Author: DeKa <80855139+denys-ko@users.noreply.github.com>
+Date:   Wed Oct 14 14:34:31 2026 +0300
+
+    Merge pull request #26 from arturiliushchits/main
+
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git push
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/denys-ko/softwareDevelopmentTechLog.git/'
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git credential-manager --version
+2.6.0+3c28096588f549cb46f36b552390514356830abe
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git credential-manager github login
+info: please complete authentication in your browser...
+
+Yuliia@DESKTOP-MTLS668 MINGW64 /e/GitProject/softwareDevelopmentTechLog (main)
+$ git push
+remote: Permission to denys-ko/softwareDevelopmentTechLog.git denied to KushnerykYulia.
+fatal: unable to access 'https://github.com/denys-ko/softwareDevelopmentTechLog.git/': The requested URL returned error: 403
